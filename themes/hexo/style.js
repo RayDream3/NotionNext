@@ -8,7 +8,8 @@ const Style = () => {
   return (<style jsx global>{`
     // 底色
     body{
-        background-color: #f5f5f5
+        background-color: #f5f5f5;
+        cursor: url("../public/normal.cur"), default;
     }
     .dark body{
         background-color: black;
