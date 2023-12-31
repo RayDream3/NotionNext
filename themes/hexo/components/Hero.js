@@ -20,7 +20,7 @@ const Hero = props => {
   const scrollToWrapper = () => {
     window.scrollTo({ top: wrapperTop, behavior: 'smooth' })
   }
-  #const GREETING_WORDS = siteConfig('GREETING_WORDS').split(',')
+  //const GREETING_WORDS = siteConfig('GREETING_WORDS').split(',')
   const GREETING_WORDS = await fetch('https://v1.hitokoto.cn/?c=f&encode=text')
   useEffect(() => {
     updateHeaderHeight()
