@@ -1,10 +1,4 @@
 /* Typography */
-.body {
-    cursor: url("../icons/normal.cur"), default;
-}
-.img {
-    cursor: url(https://ik.imagekit.io/nicexl/cursor/link.cur), default !important;
-}
 .h1 {
     @apply text-4xl font-extrabold leading-tight tracking-tighter;
 }
