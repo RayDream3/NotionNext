@@ -20,8 +20,14 @@ const Hero = props => {
   const scrollToWrapper = () => {
     window.scrollTo({ top: wrapperTop, behavior: 'smooth' })
   }
-  //const GREETING_WORDS = siteConfig('GREETING_WORDS').split(',')
-  const GREETING_WORDS = await fetch('https://v1.hitokoto.cn/?c=f&encode=text')
+  const GREETING_WORDS = siteConfig('GREETING_WORDS').split(',')
+  async function fetchHitokoto() {
+    const response = await fetch('https://v1.hitokoto.cn')
+    const { uuid, hitokoto: hitokotoText } = await response.json()
+    const hitokoto = document.querySelector('#hitokoto_text')
+    hitokoto.href = `https://hitokoto.cn/?uuid=${uuid}`
+    GREETING_WORDS = hitokotoText
+}
   useEffect(() => {
     updateHeaderHeight()
 
