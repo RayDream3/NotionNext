@@ -88,7 +88,7 @@ const LayoutBase = props => {
 
                             {children}
                         </Transition>
-                        <AdSlot type='native' />
+                        
                     </div>
 
                     {/* 右侧栏 */}
